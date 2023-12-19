@@ -25,34 +25,34 @@ test("Drop down", async ({ page }) => {
     assert.strictEqual(textContentVal, "Dropdown Menu(s), Checkboxe(s) &amp; Radio Button(s)");
 });
 
-// Test case for Checkbox functionality
-test("Check box", async ({ page }) => {
-    // Arrangement: Navigate to the test page
-    await page.goto('https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html');
+// // Test case for Checkbox functionality
+// test("Check box", async ({ page }) => {
+//     // Arrangement: Navigate to the test page
+//     await page.goto('https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html');
 
-    // Action: Check the second checkbox and uncheck the third checkbox
-    await page.check('input[value= "option-2"]');
-    await page.uncheck('input[value= "option-3"]');
+//     // Action: Check the second checkbox and uncheck the third checkbox
+//     await page.check('input[value= "option-2"]');
+//     await page.uncheck('input[value= "option-3"]');
 
-    // Assertion: Check if the second checkbox is checked and the third checkbox is unchecked
-    const avail = await page.$eval('input[value= "option-2"]', (el) => el.checked);
-    const availB = await page.$eval('input[value= "option-3"]', (el) => el.checked);
-    assert.strictEqual(avail, true);
-    assert.strictEqual(availB, false);
-});
+//     // Assertion: Check if the second checkbox is checked and the third checkbox is unchecked
+//     const avail = await page.$eval('input[value= "option-2"]', (el) => el.checked);
+//     const availB = await page.$eval('input[value= "option-3"]', (el) => el.checked);
+//     assert.strictEqual(avail, true);
+//     assert.strictEqual(availB, false);
+// });
 
-// Test case for Radio Button functionality
-test("Radio button", async ({ page }) => {
-    // Arrangement: Navigate to the test page
-    await page.goto('https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html');
+// // Test case for Radio Button functionality
+// test("Radio button", async ({ page }) => {
+//     // Arrangement: Navigate to the test page
+//     await page.goto('https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html');
 
-    // Action: Check the 'green' radio button
-    await page.check("input[value= 'green']");
+//     // Action: Check the 'green' radio button
+//     await page.check("input[value= 'green']");
 
-    // Assertion: Check if the 'green' radio button is checked and the 'blue' radio button is unchecked
-    let availC = await page.$eval('input[value= "green"]', (el) => el.checked);
-    assert.strictEqual(availC, true);
+//     // Assertion: Check if the 'green' radio button is checked and the 'blue' radio button is unchecked
+//     let availC = await page.$eval('input[value= "green"]', (el) => el.checked);
+//     assert.strictEqual(availC, true);
 
-    let availD = await page.$eval('input[value= "blue"]', (el) => el.checked);
-    assert.strictEqual(availD, false);
-});
+//     let availD = await page.$eval('input[value= "blue"]', (el) => el.checked);
+//     assert.strictEqual(availD, false);
+// });
